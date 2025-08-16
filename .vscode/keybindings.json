@@ -1,0 +1,398 @@
+// Place your key bindings in this file to override the defaults
+[
+    // ===== Composer Mode 相关快捷键 =====
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+        // 启动 Composer 的 Agent 模式
+    },
+    {
+        "key": "cmd+i",
+        "command": "-composer.startComposerPrompt"
+        // 禁用默认的 Composer 提示启动命令
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "-composer.newAgentChat"
+        // 禁用默认的新 Agent 聊天命令
+    },
+    {
+        "key": "shift+cmd+i",
+        "command": "composerMode.chat"
+        // 启动 Composer 的聊天模式
+    },
+    {
+        "key": "cmd+e",
+        "command": "composerMode.background"
+        // 启动 Composer 的后台模式
+    },
+
+    // ===== 文件路径复制相关快捷键 =====
+    {
+        "key": "shift+cmd+c",
+        "command": "copyRelativeFilePath",
+        "when": "!editorFocus"
+        // 复制文件的相对路径（当编辑器未聚焦时）
+    },
+    {
+        "key": "shift+alt+cmd+c",
+        "command": "-copyRelativeFilePath",
+        "when": "!editorFocus"
+        // 禁用默认的相对路径复制命令
+    },
+    {
+        "key": "ctrl+shift+cmd+c",
+        "command": "copyFilePath",
+        "when": "!editorFocus"
+        // 复制文件的绝对路径（当编辑器未聚焦时）
+    },
+    {
+        "key": "alt+cmd+c",
+        "command": "-copyFilePath",
+        "when": "!editorFocus"
+        // 禁用默认的绝对路径复制命令
+    },
+
+    // ===== 编辑器操作快捷键 =====
+    {
+        "key": "shift+f6",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+        // 重命名符号（变量、函数等）
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+        // 删除当前行
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+        // 禁用默认的删除行命令
+    },
+    {
+        "key": "shift+enter",
+        "command": "editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+        // 在当前行后插入新行
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-editor.action.insertLineAfter",
+        "when": "editorTextFocus && !editorReadonly"
+        // 禁用默认的插入行后命令
+    },
+    {
+        "key": "alt+cmd+enter",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+        // 在当前行前插入新行
+    },
+    {
+        "key": "shift+cmd+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+        // 禁用默认的插入行前命令
+    },
+    {
+        "key": "cmd+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+        // 向下复制当前行
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "-editor.action.copyLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+        // 禁用默认的向下复制行命令
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+        // 向上移动当前行
+    },
+    {
+        "key": "alt+up",
+        "command": "-editor.action.moveLinesUpAction",
+        "when": "editorTextFocus && !editorReadonly"
+        // 禁用默认的向上移动行命令
+    },
+    {
+        "key": "shift+cmd+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+        // 向下移动当前行
+    },
+    {
+        "key": "alt+down",
+        "command": "-editor.action.moveLinesDownAction",
+        "when": "editorTextFocus && !editorReadonly"
+        // 禁用默认的向下移动行命令
+    },
+
+    // ===== 多光标选择快捷键 =====
+    {
+        "key": "alt+up",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+        // 添加下一个匹配项到选择中（多光标）
+    },
+    {
+        "key": "cmd+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+        // 禁用默认的多光标选择命令
+    },
+
+    // ===== 编辑器组焦点管理快捷键 =====
+    {
+        "key": "cmd+; cmd+1",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+        // 聚焦到已打开编辑器视图
+    },
+    {
+        "key": "cmd+k e",
+        "command": "-workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+        // 禁用默认的聚焦已打开编辑器视图命令
+    },
+    {
+        "key": "cmd+; cmd+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+        // 聚焦到第一个编辑器组
+    },
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+        // 禁用默认的聚焦第一个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+2",
+        "command": "workbench.action.focusSecondEditorGroup"
+        // 聚焦到第二个编辑器组
+    },
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+        // 禁用默认的聚焦第二个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+3",
+        "command": "workbench.action.focusThirdEditorGroup"
+        // 聚焦到第三个编辑器组
+    },
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
+        // 禁用默认的聚焦第三个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+4",
+        "command": "workbench.action.focusFourthEditorGroup"
+        // 聚焦到第四个编辑器组
+    },
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+        // 禁用默认的聚焦第四个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+5",
+        "command": "workbench.action.focusFifthEditorGroup"
+        // 聚焦到第五个编辑器组
+    },
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+        // 禁用默认的聚焦第五个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+6",
+        "command": "workbench.action.focusSixthEditorGroup"
+        // 聚焦到第六个编辑器组
+    },
+    {
+        "key": "cmd+6",
+        "command": "-workbench.action.focusSixthEditorGroup"
+        // 禁用默认的聚焦第六个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+7",
+        "command": "workbench.action.focusSeventhEditorGroup"
+        // 聚焦到第七个编辑器组
+    },
+    {
+        "key": "cmd+7",
+        "command": "-workbench.action.focusSeventhEditorGroup"
+        // 禁用默认的聚焦第七个编辑器组命令
+    },
+    {
+        "key": "cmd+; cmd+8",
+        "command": "workbench.action.focusEighthEditorGroup"
+        // 聚焦到第八个编辑器组
+    },
+    {
+        "key": "cmd+8",
+        "command": "-workbench.action.focusEighthEditorGroup"
+        // 禁用默认的聚焦第八个编辑器组命令
+    },
+
+    // ===== 侧边栏视图快捷键 =====
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+        // 显示/隐藏资源管理器视图
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer",
+        "when": "viewContainer.workbench.view.explorer.enabled"
+        // 禁用默认的资源管理器视图命令
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.scm.history.focus"
+        // 聚焦到 SCM 历史视图
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+        // 显示/隐藏源代码管理视图
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
+        // 禁用默认的源代码管理视图命令
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.extension.kiro"
+        // 显示/隐藏 Kiro 扩展视图
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+        // 显示/隐藏调试视图
+    },
+    {
+        "key": "shift+cmd+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+        // 禁用默认的调试视图命令
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+        // 显示/隐藏扩展视图
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions",
+        "when": "viewContainer.workbench.view.extensions.enabled"
+        // 禁用默认的扩展视图命令
+    },
+
+    // ===== 扩展视图快捷键 =====
+    {
+        "key": "cmd+2",
+        "command": "workbench.view.extension.test"
+        // 显示/隐藏测试扩展视图
+    },
+
+    // ===== 导航快捷键 =====
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack"
+        // 导航到上一个位置
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+        // 禁用默认的向后导航命令
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+        // 导航到下一个位置
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward",
+        "when": "canNavigateForward"
+        // 禁用默认的向前导航命令
+    },
+
+    // ===== 代码格式化和导入整理快捷键 =====
+    {
+        "key": "ctrl+shift+f",
+        "command": "editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+        // 格式化文档（无格式化提供者时）
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument.none",
+        "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+        // 禁用默认的无格式化提供者格式化命令
+    },
+    {
+        "key": "shift+alt+,",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+        // 格式化文档（有格式化提供者时）
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+        // 禁用默认的格式化文档命令
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "editor.action.organizeImports",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+        // 整理导入语句
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "-editor.action.organizeImports",
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+        // 禁用默认的整理导入命令
+    },
+
+    // ===== 其他功能快捷键 =====
+    {
+        "key": "shift+cmd+l",
+        "command": "-kiroAgent.focusContinueInputWithoutClear"
+        // 禁用 Kiro Agent 的继续输入焦点命令
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "-toggleFindInSelection",
+        "when": "editorFocus"
+        // 禁用默认的在选择中查找切换命令
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus"
+        // 禁用默认的在每行末尾插入光标命令
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "workbench.action.chat.addSelectedFilesToWorkingSet"
+        // 将选中的文件添加到聊天工作集
+    }
+]

@@ -1,0 +1,64 @@
+{
+    // ===== Git 配置 =====
+    "git.autofetch": true,                    // 自动获取 Git 更新
+    
+    // ===== 界面配置 =====
+    "window.commandCenter": true,              // 启用命令中心
+    "workbench.tree.indent": 14,              // 文件资源管理器缩进大小
+    
+    // ===== 字体大小配置 =====
+    "editor.fontSize": 12,                    // 编辑器字体大小
+    "terminal.integrated.fontSize": 12,       // 集成终端字体大小
+    "debug.console.fontSize": 12,             // 调试控制台字体大小
+    "chat.editor.fontSize": 12,               // 聊天编辑器字体大小
+    "markdown.preview.fontSize": 12,          // Markdown 预览字体大小
+    "editor.minimap.sectionHeaderFontSize": 13, // 小地图章节标题字体大小
+    
+    // ===== 自动保存和格式化配置 =====
+    "files.autoSave": "afterDelay",           // 延迟后自动保存文件
+    "notebook.formatOnSave.enabled": true,    // 保存时格式化笔记本
+    
+    // ===== Python 语言特定配置 =====
+    "[python]": {
+        "editor.formatOnSave": true,          // Python 文件保存时自动格式化
+        "editor.defaultFormatter": "charliermarsh.ruff", // 使用 Ruff 作为默认格式化工具
+    },
+    
+    // ===== Python 环境配置 =====
+    "python.envFile": "${workspaceFolder}/.env", // Python 环境变量文件路径
+    "python.terminal.activateEnvInCurrentTerminal": true, // 在当前终端中激活 Python 环境
+    
+    // ===== Python 路径配置 =====
+    "python.autoComplete.extraPaths": [       // Python 自动完成额外路径
+        "src"
+    ],
+    "python.analysis.extraPaths": [           // Python 分析额外路径
+        "src"
+    ],
+    "python.analysis.autoImportCompletions": true, // 启用自动导入补全
+    
+    // ===== Python 测试配置 =====
+    "python.testing.pytestArgs": [            // Pytest 测试参数
+        "src", 
+        "tests" 
+    ],
+    "python.testing.unittestEnabled": false,  // 禁用 unittest
+    "python.testing.pytestEnabled": true,     // 启用 pytest
+    
+    // ===== 颜色自定义 =====
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#668866" // 编辑器选择背景颜色
+    },
+    
+    // ===== 文件排除配置 =====
+    "files.exclude": {                        // 在文件资源管理器中隐藏的文件/文件夹
+        "venv": true,                         // 隐藏虚拟环境文件夹
+        ".venv": true,                        // 隐藏 .venv 文件夹
+    },
+    
+    // ===== 搜索排除配置 =====
+    "search.exclude": {                       // 在搜索中排除的文件/文件夹
+        "venv": true,                         // 排除虚拟环境
+        ".venv": true                         // 排除 .venv 文件夹
+    }
+}
