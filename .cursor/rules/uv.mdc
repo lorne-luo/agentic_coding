@@ -6,6 +6,8 @@ alwaysApply: false
 
 [These rules](https://cursor.directory/python-uv) define strict guidelines for managing Python dependencies in this project using the `uv` dependency manager.
 
+** this rule should be only used in Python based project **
+
 **✅ Use `uv` exclusively**
 
 - All Python dependencies **must be installed, synchronized, and locked** using `uv`.

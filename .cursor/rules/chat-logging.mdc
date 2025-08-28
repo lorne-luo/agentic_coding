@@ -1,0 +1,35 @@
+---
+alwaysApply: true
+---
+# Chat Logging Rule
+
+For every handled prompt, append a log entry to [chat.log](mdc:.cursor/chat.log) with:
+- Time (in format YYYY-mm-dd HH:mm:ss+z)
+- Chat mode (ask | agent | inline)
+- Model name (sonnet 4 | gpt5)
+- Prompt content (verbatim)
+
+At the end of a task, also append:
+- Total elapsed time
+- Input token count
+- Output token count
+
+Log format (one JSON object per line):
+```json
+{
+  "time": "2025-01-01 12:00:00+10:00",
+  "mode": "agent",
+  "model": "gpt5",
+  "prompt": "...",
+  "summary": {
+    "elapsedSeconds": 0,
+    "inputTokens": 0,
+    "outputTokens": 0
+  }
+}
+```
+
+Implementation notes:
+- If the task is in-progress and not yet completed, omit `summary`.
+- Ensure entries are newline-delimited JSON (NDJSON).
+- 
