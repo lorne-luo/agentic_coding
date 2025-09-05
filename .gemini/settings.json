@@ -1,0 +1,9 @@
+{
+    "preferredEditor": "code",
+    "vimMode": false,
+    "theme": "GitHub",
+    "hideTips": false,
+    "hideBanner": true,
+    "model": "gemini-2.5-flash",
+    "selectedAuthType": "gemini-api-key"
+  }
